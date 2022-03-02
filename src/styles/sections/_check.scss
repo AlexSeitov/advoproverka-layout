@@ -1,0 +1,64 @@
+.check {
+  &__title {
+  }
+
+  &__row {
+    display: grid;
+    gap: rem(50);
+
+    @media (min-width: $md) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__form {
+  }
+
+  &__img {
+    max-width: rem(440);
+    margin-inline: auto;
+
+    @media (min-width: $md) {
+      max-width: 100%;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(16);
+
+  &__input {
+    padding: rem(13) rem(15);
+    border: none;
+    border-radius: 5px;
+    outline: 1px solid $borderColor;
+
+    &::placeholder {
+      color: $placeholderColor;
+      font-size: rem(14);
+
+      @media (min-width: $lg) {
+        font-size: rem(16);
+      }
+    }
+
+    &:focus {
+      outline-color: $primaryColor;
+    }
+
+    &:focus::placeholder {
+      opacity: 0.5;
+    }
+  }
+
+  &__btn {
+    margin-top: rem(25);
+
+    @media (max-width: rem(767.98)) {
+      margin-inline: auto;
+      width: 100%;
+    }
+  }
+}

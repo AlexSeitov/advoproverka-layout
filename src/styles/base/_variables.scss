@@ -1,0 +1,53 @@
+// Fonts, text
+$fontFamily: 'Arial', sans-serif;
+$secondaryFontFamily: 'Play', sans-serif;
+$fontSize: rem(16);
+$fontWeight: 400;
+$lineHeight: 1.4;
+
+// Colors
+$primaryColor: #0263b2;
+$secondaryColor: #b20237;
+$primaryBgColor: #1e3685;
+$secondaryBgColor: #f2f8fc;
+$tertiaryBgColor: #fafcff;
+$black: #000;
+$white: #fff;
+$btnColorHover: #99002e;
+$borderColor: #e0e0e0;
+$gray: #66727f;
+$placeholderColor: #999;
+
+// Others
+$radius: rem(10);
+$shadow: 0 0 12px 0 rgba(230, 235, 245, 50%);
+$transition: 0.3s;
+
+// Sizes
+$minWidth: 320;
+$maxWidth: 1920;
+$maxWidthContainer: 1136;
+$containerPadding: 30;
+
+// Container width
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Breakpoints
+$sm: rem(568);
+$md: rem(768);
+$lg: rem(1024);
+$xl: rem(1440);
+
+// Grid
+// $col-1: calc(100% / 12 * 1);
+// $col-2: calc(100% / 12 * 2);
+// $col-3: calc(100% / 12 * 3);
+// $col-4: calc(100% / 12 * 4);
+// $col-5: calc(100% / 12 * 5);
+// $col-6: 50%;
+// $col-7: calc(100% / 12 * 7);
+// $col-8: calc(100% / 12 * 8);
+// $col-9: calc(100% / 12 * 9);
+// $col-10: calc(100% / 12 * 10);
+// $col-11: calc(100% / 12 * 11);
+// $col-12: 100%;

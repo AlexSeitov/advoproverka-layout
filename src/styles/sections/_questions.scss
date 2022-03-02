@@ -1,0 +1,56 @@
+.questions {
+  background-color: $secondaryBgColor;
+
+  // .questions__title
+
+  &__title {
+  }
+
+  // .questions__accordion
+
+  &__accordion {
+    display: grid;
+    gap: rem(20);
+
+    @media (min-width: $lg) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  // .questions__column
+
+  &__accordion-column {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+  }
+
+  // .questions__accordion-item
+
+  &__accordion-item {
+    background-color: $white;
+    border-radius: $radius;
+    box-shadow: $shadow;
+  }
+
+  // .questions__accordion-head
+
+  &__accordion-head {
+    padding: rem(20);
+    color: $primaryColor;
+
+    @media (min-width: $lg) {
+      padding: rem(24);
+    }
+  }
+
+  // .questions__accordion-text
+
+  &__accordion-text p {
+    padding: 0 rem(20) rem(20);
+
+    @media (min-width: $lg) {
+      padding: 0 rem(24) rem(24);
+    }
+  }
+}

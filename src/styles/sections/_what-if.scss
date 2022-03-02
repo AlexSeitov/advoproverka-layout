@@ -1,0 +1,82 @@
+.what-if {
+  background-color: $primaryColor;
+
+  // .what-if__title
+
+  &__title {
+    color: $white;
+  }
+
+  // .what-if__item
+
+  &__item {
+    position: relative;
+    margin-bottom: rem(20);
+    padding: rem(20);
+    background-color: $white;
+    border-radius: rem(10);
+
+    @media (min-width: $md) {
+      padding: rem(24);
+      padding-left: rem(134);
+    }
+  }
+
+  // .what-if__item-icon
+
+  &__item-icon {
+    width: rem(65);
+    min-width: rem(65);
+    margin-right: rem(10);
+
+    @media (min-width: $md) {
+      position: absolute;
+      top: 50%;
+      left: rem(20);
+      width: rem(90);
+      min-width: rem(90);
+      margin-right: rem(25);
+      transform: translateY(-50%);
+    }
+  }
+
+  // .what-if__item-title
+
+  &__item-title {
+    display: flex;
+    align-items: center;
+  }
+
+  // .what-if__remark
+
+  &__remark {
+    display: flex;
+    align-items: center;
+    padding: rem(20);
+    background-color: $white;
+    border-radius: rem(10);
+
+    @media (min-width: $md) {
+      padding: rem(24);
+    }
+  }
+
+  // .what-if__remark-icon
+
+  &__remark-icon {
+    width: rem(30);
+    min-width: rem(30);
+    margin-right: rem(15);
+  }
+
+  // .what-if__remark-text
+
+  &__remark-text {
+    color: $primaryBgColor;
+    font-weight: 700;
+
+    @media (min-width: $md) {
+      font-size: rem(18);
+    }
+  }
+}

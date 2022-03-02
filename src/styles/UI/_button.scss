@@ -1,0 +1,26 @@
+.btn {
+  display: block;
+  max-width: rem(320);
+  padding: rem(15) rem(20);
+  color: $white;
+  font-size: rem(16);
+  line-height: lh(18.4);
+  text-align: center;
+  text-decoration: none;
+  background-color: $secondaryColor;
+  border: none;
+  border-radius: rem(5);
+  cursor: pointer;
+  transition: all $transition;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $btnColorHover;
+    }
+  }
+
+  @media (min-width: $md) {
+    display: inline-block;
+    padding: rem(17) rem(26);
+  }
+}
