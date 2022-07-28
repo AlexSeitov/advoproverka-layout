@@ -4,4 +4,6 @@
 npm run prettier:fix
 npm run stylelint:fix
 npm run htmlhint
+npm run htmlValidation
+npm run eslint:fix
 npm run eslint

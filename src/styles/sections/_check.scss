@@ -1,24 +1,21 @@
-.check {
-  &__title {
-  }
+@use '../base/functions';
+@use '../base/variables';
 
+.check {
   &__row {
     display: grid;
-    gap: rem(50);
+    gap: functions.rem(50);
 
-    @media (min-width: $md) {
+    @media (min-width: variables.$md) {
       grid-template-columns: 1fr 1fr;
     }
   }
 
-  &__form {
-  }
-
   &__img {
-    max-width: rem(440);
+    max-width: functions.rem(440);
     margin-inline: auto;
 
-    @media (min-width: $md) {
+    @media (min-width: variables.$md) {
       max-width: 100%;
     }
   }
@@ -27,25 +24,25 @@
 .form {
   display: flex;
   flex-direction: column;
-  row-gap: rem(16);
+  row-gap: functions.rem(16);
 
   &__input {
-    padding: rem(13) rem(15);
+    padding: functions.rem(13) functions.rem(15);
     border: none;
     border-radius: 5px;
-    outline: 1px solid $borderColor;
+    outline: 1px solid variables.$borderColor;
 
     &::placeholder {
-      color: $placeholderColor;
-      font-size: rem(14);
+      color: variables.$placeholderColor;
+      font-size: functions.rem(14);
 
-      @media (min-width: $lg) {
-        font-size: rem(16);
+      @media (min-width: variables.$lg) {
+        font-size: functions.rem(16);
       }
     }
 
     &:focus {
-      outline-color: $primaryColor;
+      outline-color: variables.$primaryColor;
     }
 
     &:focus::placeholder {
@@ -54,9 +51,9 @@
   }
 
   &__btn {
-    margin-top: rem(25);
+    margin-top: functions.rem(25);
 
-    @media (max-width: rem(767.98)) {
+    @media (max-width: functions.rem(767.98)) {
       margin-inline: auto;
       width: 100%;
     }

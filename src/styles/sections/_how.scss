@@ -1,16 +1,14 @@
+@use '../base/functions';
+@use '../base/variables';
+
 .how {
-  // .how__title
-
-  &__title {
-  }
-
   // .how__row
 
   &__row {
     display: flex;
     flex-direction: column-reverse;
 
-    @media (min-width: $lg) {
+    @media (min-width: variables.$lg) {
       flex-direction: row;
     }
   }
@@ -26,15 +24,15 @@
 
   &__img {
     margin-inline: auto;
-    max-width: rem(320);
-    margin-bottom: rem(40);
+    max-width: functions.rem(320);
+    margin-bottom: functions.rem(40);
 
-    @media (min-width: $md) {
-      max-width: rem(354);
+    @media (min-width: variables.$md) {
+      max-width: functions.rem(354);
     }
 
-    @media (min-width: $lg) {
-      max-width: rem(479);
+    @media (min-width: variables.$lg) {
+      max-width: functions.rem(479);
     }
   }
 
@@ -43,7 +41,7 @@
   &__btn {
     margin-inline: auto;
 
-    @media (min-width: $md) {
+    @media (min-width: variables.$md) {
       display: block;
     }
   }
@@ -51,30 +49,25 @@
   // .how__info
 
   &__info {
-    @media (min-width: $lg) {
-      max-width: rem(643);
-      margin-left: rem(35);
+    @media (min-width: variables.$lg) {
+      max-width: functions.rem(643);
+      margin-left: functions.rem(35);
     }
-  }
-
-  // .how__info-item
-
-  &__info-item {
   }
 }
 
 .info-item {
   position: relative;
-  margin-bottom: rem(24);
-  padding-left: rem(38);
+  margin-bottom: functions.rem(24);
+  padding-left: functions.rem(38);
 
   &:not(:last-child)::after {
     position: absolute;
-    top: rem(28);
-    left: rem(14);
+    top: functions.rem(28);
+    left: functions.rem(14);
     z-index: -1;
     height: 100%;
-    border: 1px solid $gray;
+    border: 1px solid variables.$gray;
     content: '';
   }
 
@@ -83,38 +76,28 @@
   &__icon {
     position: absolute;
     left: 0;
-    width: rem(28);
-    min-width: rem(28);
-  }
-
-  // .info-item__title
-
-  &__title {
-  }
-
-  // .info-item__text
-
-  &__text {
+    width: functions.rem(28);
+    min-width: functions.rem(28);
   }
 
   // .info-item__add
 
   &__add {
-    margin-bottom: rem(22);
+    margin-bottom: functions.rem(22);
   }
 }
 
 .info-list {
   display: flex;
   flex-wrap: wrap;
-  gap: rem(28) rem(38);
+  gap: functions.rem(28) functions.rem(38);
 
   // .info-list__item
 
   &__item {
-    display: flex;
+    display: flex
 
-    @media (min-width: $sm) {
+    @media (min-width: variables.$sm) {
       flex: 1 0 292px;
     }
   }
@@ -122,13 +105,13 @@
   // .info-list__item-icon
 
   &__item-icon {
-    width: rem(11);
-    min-width: rem(11);
+    width: functions.rem(11);
+    min-width: functions.rem(11);
   }
 
   // .info-list__item-text
 
   &__item-text {
-    margin-left: rem(8);
+    margin-left: functions.rem(8);
   }
 }

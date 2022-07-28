@@ -1,3 +1,6 @@
+@use '../base/functions';
+@use '../base/variables';
+
 .accordion {
   &__item {
     position: relative;
@@ -8,17 +11,17 @@
     align-items: center;
     width: 92%;
     cursor: pointer;
-    transition: all $transition ease-out;
+    transition: all variables.$transition ease-out;
 
     &::after {
       position: absolute;
-      right: rem(20);
+      right: functions.rem(20);
       display: inline-block;
       padding: 6px;
-      border: solid $primaryColor;
+      border: solid variables.$primaryColor;
       border-width: 0 2px 2px 0;
       transform: rotate(45deg);
-      transition: transform $transition;
+      transition: transform variables.$transition;
       content: '';
     }
   }
@@ -32,6 +35,6 @@
   &__text {
     max-height: 0;
     overflow: hidden;
-    transition: max-height $transition ease-out;
+    transition: max-height variables.$transition ease-out;
   }
 }

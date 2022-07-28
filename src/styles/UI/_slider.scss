@@ -1,3 +1,6 @@
+@use '../base/functions';
+@use '../base/variables';
+
 .swiper {
   overflow: hidden;
 }
@@ -14,31 +17,31 @@
 .swiper-btns {
   display: flex;
   justify-content: center;
-  margin-top: rem(30);
+  margin-top: functions.rem(30);
 
-  @media (min-width: $md) {
-    margin-top: rem(40);
+  @media (min-width: variables.$md) {
+    margin-top: functions.rem(40);
   }
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-  width: rem(16);
-  height: rem(16);
+  width: functions.rem(16);
+  height: functions.rem(16);
   cursor: pointer;
 
   &::after {
     display: inline-block;
     padding: 6px;
-    border: solid $primaryBgColor;
+    border: solid variables.$primaryBgColor;
     border-width: 0 2px 2px 0;
-    transition: transform $transition;
+    transition: transform variables.$transition;
     content: '';
   }
 }
 
 .swiper-button-prev {
-  margin-right: rem(18);
+  margin-right: functions.rem(18);
 
   &::after {
     transform: rotate(135deg);
@@ -52,7 +55,7 @@
 }
 
 .swiper-button-next {
-  margin-left: rem(18);
+  margin-left: functions.rem(18);
 
   &::after {
     transform: rotate(-45deg);
@@ -71,12 +74,12 @@
 
 .swiper-pagination-bullet {
   display: inline-block;
-  width: rem(15);
-  height: rem(15);
-  border: 2px solid $primaryBgColor;
+  width: functions.rem(15);
+  height: functions.rem(15);
+  border: 2px solid variables.$primaryBgColor;
   border-radius: 50%;
   cursor: pointer;
-  transition: transform $transition;
+  transition: transform variables.$transition;
 
   @media (hover: hover) {
     &:hover {
@@ -85,11 +88,11 @@
   }
 
   &:not(:last-child) {
-    margin-right: rem(15);
+    margin-right: functions.rem(15);
   }
 }
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background: $primaryBgColor;
+  background: variables.$primaryBgColor;
   opacity: 1;
 }

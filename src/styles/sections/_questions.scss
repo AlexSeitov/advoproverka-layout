@@ -1,18 +1,16 @@
+@use '../base/functions';
+@use '../base/variables';
+
 .questions {
-  background-color: $secondaryBgColor;
-
-  // .questions__title
-
-  &__title {
-  }
+  background-color: variables.$secondaryBgColor;
 
   // .questions__accordion
 
   &__accordion {
     display: grid;
-    gap: rem(20);
+    gap: functions.rem(20);
 
-    @media (min-width: $lg) {
+    @media (min-width: variables.$lg) {
       grid-template-columns: 1fr 1fr;
     }
   }
@@ -22,35 +20,35 @@
   &__accordion-column {
     display: flex;
     flex-direction: column;
-    gap: rem(20);
+    gap: functions.rem(20);
   }
 
   // .questions__accordion-item
 
   &__accordion-item {
-    background-color: $white;
-    border-radius: $radius;
-    box-shadow: $shadow;
+    background-color: variables.$white;
+    border-radius: variables.$radius;
+    box-shadow: variables.$shadow;
   }
 
   // .questions__accordion-head
 
   &__accordion-head {
-    padding: rem(20);
-    color: $primaryColor;
+    padding: functions.rem(20);
+    color: variables.$primaryColor;
 
-    @media (min-width: $lg) {
-      padding: rem(24);
+    @media (min-width: variables.$lg) {
+      padding: functions.rem(24);
     }
   }
 
   // .questions__accordion-text
 
   &__accordion-text p {
-    padding: 0 rem(20) rem(20);
+    padding: 0 functions.rem(20) functions.rem(20);
 
-    @media (min-width: $lg) {
-      padding: 0 rem(24) rem(24);
+    @media (min-width: variables.$lg) {
+      padding: 0 functions.rem(24) functions.rem(24);
     }
   }
 }

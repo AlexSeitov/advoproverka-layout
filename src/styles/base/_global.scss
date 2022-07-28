@@ -1,3 +1,6 @@
+@use 'functions';
+@use 'variables';
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,11 +9,11 @@
 
 body {
   overflow-x: hidden;
-  color: $black;
-  font-weight: $fontWeight;
-  font-size: $fontSize;
-  font-family: $fontFamily;
-  line-height: $lineHeight;
+  color: variables.$black;
+  font-weight: variables.$fontWeight;
+  font-size: variables.$fontSize;
+  font-family: variables.$fontFamily;
+  line-height: variables.$lineHeight;
 }
 
 a {
@@ -38,26 +41,26 @@ img {
 }
 
 .container {
-  max-width: rem($containerWidth);
+  max-width: functions.rem(variables.$containerWidth);
   margin-inline: auto;
-  padding-inline: rem(15);
+  padding-inline: functions.rem(15);
 }
 
 .section {
-  padding: rem(56) 0;
+  padding: functions.rem(56) 0;
 }
 
 .disable-scroll {
   position: relative;
   overflow: hidden;
 
-  @media (max-width: rem(1023.98)) {
+  @media (max-width: functions.rem(1023.98)) {
     &::after {
       position: absolute;
       top: 70px;
       width: 100%;
       height: 100vh;
-      background-color: rgba($primaryBgColor, 60%);
+      background-color: rgba(variables.$primaryBgColor, 60%);
       backdrop-filter: blur(4px);
       content: '';
     }
@@ -66,9 +69,9 @@ img {
 
 .social-icon {
   display: inline-block;
-  width: rem(38);
-  height: rem(38);
-  transition: transform $transition;
+  width: functions.rem(38);
+  height: functions.rem(38);
+  transition: transform variables.$transition;
 
   @media (hover: hover) {
     &:hover {

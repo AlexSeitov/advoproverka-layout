@@ -1,12 +1,15 @@
+@use '../base/functions';
+@use '../base/variables';
+
 .footer {
-  padding: rem(40) 0 rem(30);
-  color: $white;
-  background-color: $primaryBgColor;
+  padding: functions.rem(40) 0 functions.rem(30);
+  color: variables.$white;
+  background-color: variables.$primaryBgColor;
 
   & * {
     text-align: center;
 
-    @media (min-width: $md) {
+    @media (min-width: variables.$md) {
       text-align: right;
       text-align: left;
     }
@@ -16,9 +19,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: 1px solid $gray;
+    border-bottom: 1px solid variables.$gray;
 
-    @media (min-width: $md) {
+    @media (min-width: variables.$md) {
       flex-direction: row;
       align-items: start;
       justify-content: space-between;
@@ -26,14 +29,14 @@
   }
 
   &__main-item {
-    margin-bottom: rem(40);
+    margin-bottom: functions.rem(40);
   }
 
   &__logo {
     margin-inline: auto;
-    margin-bottom: rem(40);
+    margin-bottom: functions.rem(40);
 
-    @media (min-width: $md) {
+    @media (min-width: variables.$md) {
       margin-inline: 0;
     }
   }
@@ -44,42 +47,33 @@
   }
 
   &__address-icon {
-    width: rem(10);
+    width: functions.rem(10);
   }
 
   &__address {
-    margin-bottom: rem(20);
-    margin-left: rem(10);
-  }
-
-  &__policy {
-  }
-
-  &__nav {
+    margin-bottom: functions.rem(20);
+    margin-left: functions.rem(10);
   }
 
   &__social {
-    margin-bottom: rem(20);
+    margin-bottom: functions.rem(20);
   }
 
   &__social-link {
     display: inline-block;
 
     &:not(:last-child) {
-      margin-right: rem(10);
+      margin-right: functions.rem(10);
     }
-  }
-
-  &__phones {
   }
 
   &__phones-link {
     display: block;
     font-weight: 700;
-    font-size: rem(20);
+    font-size: functions.rem(20);
 
     &:not(:last-child) {
-      margin-bottom: rem(10);
+      margin-bottom: functions.rem(10);
     }
   }
 
@@ -88,16 +82,16 @@
     grid-template-columns: minmax(149px, 210px) max-content;
     align-items: center;
     justify-content: space-between;
-    padding-top: rem(30);
+    padding-top: functions.rem(30);
     font-weight: 700;
-    font-size: rem(12);
-    column-gap: rem(18);
+    font-size: functions.rem(12);
+    column-gap: functions.rem(18);
 
-    @media (min-width: $sm) {
-      font-size: rem(14);
+    @media (min-width: variables.$sm) {
+      font-size: functions.rem(14);
     }
 
-    @media (min-width: $md) {
+    @media (min-width: variables.$md) {
       grid-template-columns: 1fr max-content;
     }
 
@@ -105,22 +99,13 @@
       text-align: left;
     }
   }
-
-  &__bottom-text {
-  }
 }
 
 .nav-footer {
-  &__list {
-  }
-
-  &__item {
-  }
-
   &__link {
-    padding: rem(10) 0;
+    padding: functions.rem(10) 0;
 
-    @media (min-width: $lg) {
+    @media (min-width: variables.$lg) {
       display: inline-block;
     }
   }

@@ -1,1 +1,2 @@
-@include font-face('Play', '../fonts/Play-Bold', 700, normal);
+@use '../mixins/font-face';
+@include font-face.font-face('Play', '../fonts/Play-Bold', 700, normal);

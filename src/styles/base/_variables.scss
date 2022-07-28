@@ -1,7 +1,9 @@
+@use 'functions';
+
 // Fonts, text
 $fontFamily: 'Arial', sans-serif;
 $secondaryFontFamily: 'Play', sans-serif;
-$fontSize: rem(16);
+$fontSize: functions.rem(16);
 $fontWeight: 400;
 $lineHeight: 1.4;
 
@@ -19,7 +21,7 @@ $gray: #66727f;
 $placeholderColor: #999;
 
 // Others
-$radius: rem(10);
+$radius: functions.rem(10);
 $shadow: 0 0 12px 0 rgba(230, 235, 245, 50%);
 $transition: 0.3s;
 
@@ -33,10 +35,10 @@ $containerPadding: 30;
 $containerWidth: $maxWidthContainer + $containerPadding;
 
 // Breakpoints
-$sm: rem(568);
-$md: rem(768);
-$lg: rem(1024);
-$xl: rem(1440);
+$sm: functions.rem(568);
+$md: functions.rem(768);
+$lg: functions.rem(1024);
+$xl: functions.rem(1440);
 
 // Grid
 // $col-1: calc(100% / 12 * 1);
