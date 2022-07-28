@@ -95,7 +95,7 @@
   // .info-list__item
 
   &__item {
-    display: flex
+    display: flex;
 
     @media (min-width: variables.$sm) {
       flex: 1 0 292px;
@@ -115,3 +115,5 @@
     margin-left: functions.rem(8);
   }
 }
+
+
