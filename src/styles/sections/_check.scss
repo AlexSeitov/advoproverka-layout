@@ -13,7 +13,7 @@
 
   &__img {
     max-width: rem(440);
-    margin-inline: auto;
+    margin: 0 auto;
 
     @media (min-width: $md) {
       max-width: 100%;
@@ -22,8 +22,7 @@
 }
 
 .form {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   row-gap: rem(16);
 
   &__input {
@@ -54,8 +53,8 @@
     margin-top: rem(25);
 
     @media (max-width: rem(767.98)) {
-      margin-inline: auto;
       width: 100%;
+      margin: 0 auto;
     }
   }
 }

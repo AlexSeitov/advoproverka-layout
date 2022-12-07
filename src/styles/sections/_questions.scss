@@ -18,8 +18,7 @@
   // .questions__column
 
   &__accordion-column {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: rem(20);
   }
 

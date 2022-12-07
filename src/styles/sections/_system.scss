@@ -10,7 +10,6 @@
   &__row {
     display: flex;
     flex-wrap: wrap;
-    gap: rem(50);
 
     @media (min-width: $lg) {
       flex-wrap: nowrap;
@@ -21,30 +20,32 @@
 
   &__para {
     flex: 1 0 50%;
+
+    @media (min-width: $lg) {
+      margin-right: rem(50);
+    }
   }
 }
 
 .statistics-system {
+  margin-top: rem(50);
+
+  @media (min-width: $lg) {
+    margin-top: 0;
+  }
+
   // .statistics-system__row
 
   &__row {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     gap: rem(20);
-
-    @media (min-width: $md) {
-      gap: rem(30);
-    }
-
-    @media (min-width: $lg) {
-      gap: rem(40) rem(50);
-    }
   }
 
   // .statistics-system__item
 
   &__item {
     display: flex;
+    align-items: center;
 
     @media (min-width: $sm) {
       flex: 1 0 45%;

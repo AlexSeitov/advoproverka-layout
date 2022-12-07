@@ -32,15 +32,18 @@
   &__nav {
     @media (max-width: rem(1023.98)) {
       position: fixed;
-      top: 70px;
+      top: rem(70);
       right: 0;
       z-index: 2;
       height: 100%;
       transform: translateX(200%);
-      transition: all $transition;
+      visibility: hidden;
+      transition-duration: $transition;
+      transition-property: transform, visibility;
 
       &.nav_active {
         transform: translateX(0);
+        visibility: visible;
       }
     }
   }

@@ -18,7 +18,7 @@
   // .testimonials__btn
 
   &__btn {
-    margin-inline: auto;
+    margin: 0 auto;
 
     @media (min-width: $md) {
       display: block;

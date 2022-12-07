@@ -9,8 +9,7 @@
   &__row {
     display: flex;
     flex-wrap: wrap;
-    gap: rem(16) rem(20);
-    margin-bottom: rem(40);
+    margin: 0 rem(-10) rem(24);
 
     @media (min-width: $lg) {
       flex-wrap: nowrap;
@@ -20,6 +19,7 @@
   // .choose__item
 
   &__item {
+    margin: 0 rem(10) rem(16);
     padding: rem(20);
     background: #fff;
     background-color: $white;
@@ -42,11 +42,11 @@
   // .choose__item-icon
 
   &__item-icon {
-    flex: 1 0 rem(55);
+    flex: 0 0 rem(55);
     margin-right: rem(10);
 
     @media (min-width: $lg) {
-      flex: 1 0 rem(68);
+      flex: 0 0 rem(68);
       margin-right: rem(20);
     }
   }

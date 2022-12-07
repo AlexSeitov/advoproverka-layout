@@ -23,9 +23,8 @@
   // .how__img
 
   &__img {
-    margin-inline: auto;
     max-width: rem(320);
-    margin-bottom: rem(40);
+    margin: 0 auto rem(40);
 
     @media (min-width: $md) {
       max-width: rem(354);
@@ -39,7 +38,7 @@
   // .how__btn
 
   &__btn {
-    margin-inline: auto;
+    margin: 0 auto;
 
     @media (min-width: $md) {
       display: block;
@@ -83,19 +82,22 @@
   // .info-item__add
 
   &__add {
-    margin-bottom: rem(22);
+    margin-bottom: rem(20);
+    font-weight: 700;
+    font-size: rem(18);
   }
 }
 
 .info-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: rem(28) rem(38);
 
   // .info-list__item
 
   &__item {
-    display: flex;
+    display: grid;
+    grid-template-columns: rem(12) 1fr;
+    gap: rem(10);
 
     @media (min-width: $sm) {
       flex: 1 0 292px;
@@ -105,13 +107,8 @@
   // .info-list__item-icon
 
   &__item-icon {
-    width: rem(11);
-    min-width: rem(11);
-  }
-
-  // .info-list__item-text
-
-  &__item-text {
-    margin-left: rem(8);
+    width: rem(12);
+    min-width: rem(12);
+    margin-top: rem(8);
   }
 }

@@ -41,8 +41,8 @@ img {
 
 .container {
   max-width: rem($containerWidth);
-  margin-inline: auto;
-  padding-inline: rem(15);
+  margin: 0 auto;
+  padding: 0 rem(15);
 }
 
 .section {
