@@ -1,18 +1,18 @@
-@use '../base/functions';
-@use '../base/variables';
+@use '../base/functions' as *;
+@use '../base/variables' as *;
 
 .choose {
-  background-color: variables.$secondaryBgColor;
+  background-color: $secondaryBgColor;
 
   // .choose__row
 
   &__row {
     display: flex;
     flex-wrap: wrap;
-    gap: functions.rem(16) functions.rem(20);
-    margin-bottom: functions.rem(40);
+    gap: rem(16) rem(20);
+    margin-bottom: rem(40);
 
-    @media (min-width: variables.$lg) {
+    @media (min-width: $lg) {
       flex-wrap: nowrap;
     }
   }
@@ -20,14 +20,14 @@
   // .choose__item
 
   &__item {
-    padding: functions.rem(20);
+    padding: rem(20);
     background: #fff;
-    background-color: variables.$white;
-    border-radius: functions.rem(10);
+    background-color: $white;
+    border-radius: rem(10);
     box-shadow: 0 24px 48px rgba(230, 235, 245, 40%);
 
-    @media (min-width: variables.$lg) {
-      flex: 1 0 functions.rem(302);
+    @media (min-width: $lg) {
+      flex: 1 0 rem(302);
     }
   }
 
@@ -36,17 +36,18 @@
   &__item-heading {
     display: flex;
     align-items: center;
-    margin-bottom: functions.rem(10);
+    margin-bottom: rem(10);
   }
 
   // .choose__item-icon
 
   &__item-icon {
-    flex: 0 0 functions.rem(55);
-    margin-right: functions.rem(10);
+    flex: 1 0 rem(55);
+    margin-right: rem(10);
 
-    @media (min-width: variables.$lg) {
-      flex: 0 0 functions.rem(88);
+    @media (min-width: $lg) {
+      flex: 1 0 rem(68);
+      margin-right: rem(20);
     }
   }
 
@@ -55,7 +56,7 @@
   &__item-title {
     margin-bottom: 0;
 
-    @media (min-width: variables.$sm) {
+    @media (min-width: $sm) {
       margin-bottom: 0;
     }
   }
@@ -63,7 +64,7 @@
   // .choose__btns
 
   &__btns {
-    @media (min-width: variables.$md) {
+    @media (min-width: $md) {
       display: flex;
       justify-content: center;
     }
@@ -72,14 +73,14 @@
   // .choose__btn
 
   &__btn {
-    margin: 0 auto functions.rem(15) auto;
+    margin: 0 auto rem(15) auto;
 
-    @media (min-width: variables.$md) {
-      margin: 0 functions.rem(20) 0 0;
+    @media (min-width: $md) {
+      margin: 0 rem(20) 0 0;
     }
 
-    @media (min-width: variables.$lg) {
-      margin: 0 functions.rem(30) 0 0;
+    @media (min-width: $lg) {
+      margin: 0 rem(30) 0 0;
     }
   }
 }

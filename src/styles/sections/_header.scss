@@ -1,9 +1,9 @@
-@use '../base/functions';
-@use '../base/variables';
+@use '../base/functions' as *;
+@use '../base/variables' as *;
 
 .header {
-  padding: functions.rem(13) 0;
-  background-color: variables.$primaryBgColor;
+  padding: rem(13) 0;
+  background-color: $primaryBgColor;
 
   // .header__row
 
@@ -12,7 +12,7 @@
     align-items: center;
     width: 100%;
 
-    @media (min-width: variables.$md) {
+    @media (min-width: $md) {
       justify-content: space-between;
     }
   }
@@ -22,7 +22,7 @@
   &__logo {
     margin-right: auto;
 
-    @media (min-width: variables.$lg) {
+    @media (min-width: $lg) {
       margin-right: initial;
     }
   }
@@ -30,14 +30,14 @@
   // .header__nav
 
   &__nav {
-    @media (max-width: functions.rem(1023.98)) {
+    @media (max-width: rem(1023.98)) {
       position: fixed;
       top: 70px;
       right: 0;
       z-index: 2;
       height: 100%;
       transform: translateX(200%);
-      transition: all variables.$transition;
+      transition: all $transition;
 
       &.nav_active {
         transform: translateX(0);
@@ -48,12 +48,12 @@
   // .header__phone
 
   &__phone {
-    @media (max-width: functions.rem(567.98)) {
+    @media (max-width: rem(567.98)) {
       position: fixed;
       top: 80vh;
       z-index: 2;
       transform: translateX(150%);
-      transition: transform variables.$transition;
+      transition: transform $transition;
 
       &.phone_active {
         transform: translateX(0);
@@ -64,59 +64,59 @@
   // .header__burger
 
   &__burger {
-    margin-left: functions.rem(48);
+    margin-left: rem(48);
   }
 }
 
 .logo {
   display: block;
-  width: functions.rem(150);
-  color: variables.$white;
+  width: rem(150);
+  color: $white;
 
-  @media (min-width: variables.$md) {
-    width: functions.rem(200);
+  @media (min-width: $md) {
+    width: rem(200);
   }
 }
 
 .nav {
   width: 100%;
 
-  @media (max-width: functions.rem(1023.98)) {
-    padding: 0 functions.rem(15) functions.rem(50);
+  @media (max-width: rem(1023.98)) {
+    padding: 0 rem(15) rem(50);
     font-weight: 700;
-    font-size: functions.rem(20);
-    font-family: variables.$secondaryFontFamily;
-    background-color: variables.$white;
+    font-size: rem(20);
+    font-family: $secondaryFontFamily;
+    background-color: $white;
   }
 
-  @media (min-width: variables.$sm) {
-    width: functions.rem(360);
+  @media (min-width: $sm) {
+    width: rem(360);
   }
 
-  @media (min-width: variables.$lg) {
+  @media (min-width: $lg) {
     width: initial;
   }
 
   // .nav__list
 
   &__list {
-    @media (min-width: variables.$lg) {
+    @media (min-width: $lg) {
       display: flex;
-      color: variables.$white;
-      font-size: functions.rem(16);
+      color: $white;
+      font-size: rem(16);
     }
   }
 
   // .nav__item
 
   &__item {
-    @media (max-width: functions.rem(1023.98)) {
-      border-bottom: 1px solid variables.$borderColor;
+    @media (max-width: rem(1023.98)) {
+      border-bottom: 1px solid $borderColor;
     }
 
-    @media (min-width: variables.$lg) {
+    @media (min-width: $lg) {
       &:not(:first-child) {
-        margin-left: functions.rem(40);
+        margin-left: rem(40);
       }
     }
   }
@@ -125,10 +125,10 @@
 
   &__link {
     display: block;
-    padding: functions.rem(20) 0;
+    padding: rem(20) 0;
     text-decoration: none;
 
-    @media (min-width: variables.$lg) {
+    @media (min-width: $lg) {
       display: initial;
     }
 
@@ -147,13 +147,13 @@
 }
 
 .phone {
-  @media (max-width: functions.rem(567.98)) {
+  @media (max-width: rem(567.98)) {
     width: 90%;
     text-align: center;
   }
 
-  @media (min-width: variables.$sm) {
-    color: variables.$white;
+  @media (min-width: $sm) {
+    color: $white;
   }
 
   // .phone__icon
@@ -161,10 +161,10 @@
   &__icon {
     display: none;
 
-    @media (min-width: variables.$md) {
+    @media (min-width: $md) {
       display: inline-block;
-      width: functions.rem(14);
-      height: functions.rem(14);
+      width: rem(14);
+      height: rem(14);
     }
   }
 
@@ -179,24 +179,24 @@
       }
     }
 
-    @media (max-width: functions.rem(567.98)) {
+    @media (max-width: rem(567.98)) {
       font-weight: 700;
-      font-size: functions.rem(20);
-      font-family: variables.$secondaryFontFamily;
+      font-size: rem(20);
+      font-family: $secondaryFontFamily;
     }
 
-    @media (min-width: variables.$lg) {
-      font-size: functions.rem(18);
+    @media (min-width: $lg) {
+      font-size: rem(18);
     }
   }
 
   // .phone__callback
 
   &__callback {
-    font-size: functions.rem(12);
+    font-size: rem(12);
     text-decoration: underline;
 
-    @media (min-width: variables.$sm) {
+    @media (min-width: $sm) {
       text-align: right;
     }
   }

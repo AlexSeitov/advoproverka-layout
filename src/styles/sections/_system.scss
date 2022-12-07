@@ -1,18 +1,18 @@
-@use '../base/functions';
-@use '../base/variables';
+@use '../base/functions' as *;
+@use '../base/variables' as *;
 
 .system {
-  color: variables.$white;
-  background-color: variables.$primaryColor;
+  color: $white;
+  background-color: $primaryColor;
 
   // .system__row
 
   &__row {
     display: flex;
     flex-wrap: wrap;
-    gap: functions.rem(50);
+    gap: rem(50);
 
-    @media (min-width: variables.$lg) {
+    @media (min-width: $lg) {
       flex-wrap: nowrap;
     }
   }
@@ -30,14 +30,14 @@
   &__row {
     display: flex;
     flex-wrap: wrap;
-    gap: functions.rem(20);
+    gap: rem(20);
 
-    @media (min-width: variables.$md) {
-      gap: functions.rem(30);
+    @media (min-width: $md) {
+      gap: rem(30);
     }
 
-    @media (min-width: variables.$lg) {
-      gap: functions.rem(40) functions.rem(50);
+    @media (min-width: $lg) {
+      gap: rem(40) rem(50);
     }
   }
 
@@ -46,7 +46,7 @@
   &__item {
     display: flex;
 
-    @media (min-width: variables.$sm) {
+    @media (min-width: $sm) {
       flex: 1 0 45%;
     }
   }
@@ -54,19 +54,19 @@
   // .statistics-system__icon
 
   &__icon {
-    width: functions.rem(44);
-    min-width: functions.rem(44);
-    margin-right: functions.rem(10);
-    padding-top: functions.rem(10);
+    width: rem(44);
+    min-width: rem(44);
+    margin-right: rem(10);
+    padding-top: rem(10);
 
-    @media (min-width: variables.$lg) {
-      margin-right: functions.rem(24);
+    @media (min-width: $lg) {
+      margin-right: rem(24);
     }
   }
 
   // .statistics-system__text
 
   &__text {
-    font-size: functions.rem(14);
+    font-size: rem(14);
   }
 }

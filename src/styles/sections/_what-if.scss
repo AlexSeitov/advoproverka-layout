@@ -1,44 +1,46 @@
-@use '../base/functions';
-@use '../base/variables';
+@use '../base/functions' as *;
+@use '../base/variables' as *;
 
 .what-if {
-  background-color: variables.$primaryColor;
+  background-color: $primaryColor;
 
   // .what-if__title
 
   &__title {
-    color: variables.$white;
+    color: $white;
   }
 
   // .what-if__item
 
   &__item {
-    position: relative;
-    margin-bottom: functions.rem(20);
-    padding: functions.rem(20);
-    background-color: variables.$white;
-    border-radius: functions.rem(10);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: rem(20);
+    padding: rem(20);
+    background-color: $white;
+    border-radius: rem(10);
 
-    @media (min-width: variables.$md) {
-      padding: functions.rem(24);
-      padding-left: functions.rem(134);
+    @media (min-width: $md) {
+      position: relative;
+      align-items: start;
+      padding: rem(24);
     }
   }
 
   // .what-if__item-icon
 
   &__item-icon {
-    width: functions.rem(65);
-    min-width: functions.rem(65);
-    margin-right: functions.rem(10);
+    width: rem(65);
+    height: rem(65);
+    margin-right: rem(20);
 
-    @media (min-width: variables.$md) {
+    @media (min-width: $md) {
       position: absolute;
       top: 50%;
-      left: functions.rem(20);
-      width: functions.rem(90);
-      min-width: functions.rem(90);
-      margin-right: functions.rem(25);
+      width: rem(90);
+      height: rem(90);
+      margin-right: 0;
       transform: translateY(-50%);
     }
   }
@@ -46,8 +48,21 @@
   // .what-if__item-title
 
   &__item-title {
-    display: flex;
-    align-items: center;
+    flex: 1 0 60%;
+
+    @media (min-width: $md) {
+      flex: 1 0 auto;
+      margin-left: rem(110);
+    }
+  }
+
+  &__text {
+    margin-top: rem(10);
+
+    @media (min-width: $md) {
+      margin-top: 0;
+      margin-left: rem(110);
+    }
   }
 
   // .what-if__remark
@@ -55,31 +70,31 @@
   &__remark {
     display: flex;
     align-items: center;
-    padding: functions.rem(20);
-    background-color: variables.$white;
-    border-radius: functions.rem(10);
+    padding: rem(20);
+    background-color: $white;
+    border-radius: rem(10);
 
-    @media (min-width: variables.$md) {
-      padding: functions.rem(24);
+    @media (min-width: $md) {
+      padding: rem(24);
     }
   }
 
   // .what-if__remark-icon
 
   &__remark-icon {
-    width: functions.rem(30);
-    min-width: functions.rem(30);
-    margin-right: functions.rem(15);
+    width: rem(30);
+    min-width: rem(30);
+    margin-right: rem(15);
   }
 
   // .what-if__remark-text
 
   &__remark-text {
-    color: variables.$primaryBgColor;
+    color: $primaryBgColor;
     font-weight: 700;
 
-    @media (min-width: variables.$md) {
-      font-size: functions.rem(18);
+    @media (min-width: $md) {
+      font-size: rem(18);
     }
   }
 }

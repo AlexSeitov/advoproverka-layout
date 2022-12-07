@@ -1,17 +1,17 @@
-@use '../base/functions';
-@use '../base/variables';
+@use '../base/functions' as *;
+@use '../base/variables' as *;
 
 .testimonials {
-  background-color: variables.$tertiaryBgColor;
+  background-color: $tertiaryBgColor;
 
   // .testimonials__slider
 
   &__slider {
-    margin-bottom: functions.rem(40);
+    margin-bottom: rem(40);
 
     &.swiper {
-      padding-bottom: functions.rem(30);
-      border-bottom: 1px solid variables.$borderColor;
+      padding-bottom: rem(30);
+      border-bottom: 1px solid $borderColor;
     }
   }
 
@@ -20,7 +20,7 @@
   &__btn {
     margin-inline: auto;
 
-    @media (min-width: variables.$md) {
+    @media (min-width: $md) {
       display: block;
     }
   }
@@ -29,21 +29,21 @@
 .slider-item {
   display: flex;
   flex-direction: column;
-  padding: functions.rem(10);
-  background-color: variables.$white;
-  border-radius: variables.$radius;
-  box-shadow: variables.$shadow;
+  padding: rem(10);
+  background-color: $white;
+  border-radius: $radius;
+  box-shadow: $shadow;
 
   &.swiper-slide {
     height: initial;
   }
 
   &__title {
-    color: variables.$primaryColor;
+    color: $primaryColor;
   }
 
   &__text {
-    margin-bottom: functions.rem(20);
+    margin-bottom: rem(20);
   }
 
   &__footer {
@@ -52,6 +52,6 @@
 
   &__author,
   &__date {
-    color: variables.$gray;
+    color: $gray;
   }
 }
